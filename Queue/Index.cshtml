@@ -1,0 +1,50 @@
+﻿<!--Queue Index View-->
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Queue Index</title>
+</head>
+<body>
+    <!--Main navigation bar-->
+    <div class="w3-bar w3-black">
+        <a href="@Url.Action("Index", "Home")" class="w3-bar-item w3-button">Home</a>
+        <a href="@Url.Action("Index", "Stack")" class="w3-bar-item w3-button">Stack</a>
+        <a href="@Url.Action("Index", "Queue")" class="w3-bar-item w3-button">Queue</a>
+        <a href="@Url.Action("Index", "Dictionary")" class="w3-bar-item w3-button">Dictionary</a>
+        <a href="@Url.Action("Exit", "Home")" class="w3-bar-item w3-button">Exit</a>
+    </div>
+    <!-- Sidebar -->
+    <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
+        <h3 class="w3-bar-item">Options</h3>
+        <a href="@Url.Action("AddOne", "Queue")" class="w3-bar-item w3-button">Add one time to Queue</a>
+        <a href="@Url.Action("AddHuge", "Queue")" class="w3-bar-item w3-button">Add Huge List of Items to Queue</a>
+        <a href="@Url.Action("DisplayEntries", "Queue")" class="w3-bar-item w3-button">Display Queue</a>
+        <a href="@Url.Action("DeleteOne", "Queue")" class="w3-bar-item w3-button">Delete from Queue</a>
+        <a href="@Url.Action("ClearEntries", "Queue")" class="w3-bar-item w3-button">Clear Queue</a>
+        <a href="@Url.Action("Search", "Queue")" class="w3-bar-item w3-button">Search Queue</a>
+        <a href="@Url.Action("Index", "Home")" class="w3-bar-item w3-button">Return to Main Menu</a>
+    </div>
+    <!-- Page Content -->
+    <div style="margin-left:25%">
+
+        <div class="w3-container w3-teal">
+            <h1>Cue Ball Queues</h1>
+        </div>
+
+        <div>
+            @ViewBag.Comments
+            @foreach (var sName in ViewBag.CueQueue)
+            {
+                <p>@sName</p>
+            }
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <script src="~/Scripts/MyJavaScript.js"></script>
+    <link rel="stylesheet" src="~/Content/MyCSS.css" type="text/css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Home Index</title>
+</head>
+<body>
+    <!--Main navigation bar-->
+    <div class="w3-bar w3-black">
+        <a href="@Url.Action("Index", "Home")" class="w3-bar-item w3-button">Home</a>
+        <a href="@Url.Action("Index", "Stack")" class="w3-bar-item w3-button">Stack</a>
+        <a href="@Url.Action("Index", "Queue")" class="w3-bar-item w3-button">Queue</a>
+        <a href="@Url.Action("Index", "Dictionary")" class="w3-bar-item w3-button">Dictionary</a>
+        <a href="@Url.Action("Exit", "Home")" class="w3-bar-item w3-button">Exit</a>
+    </div>
+    <!--Options with pictures-->
+    <div class="w3-row-padding">
+        <div class="w3-col s4">
+            <p>
+                <a href="@Url.Action("Index", "Stack")">
+                    <img src="~/Graphics/Pancakes.jpeg" alt="Pancake Stack" width="300" height="300"/>
+                </a>
+            </p>
+        </div>
+        <div class="w3-col s4">
+            <p>
+                <a href="@Url.Action("Index", "Queue")">
+                    <img src="~/Graphics/CueBall.jpg" alt="Cue Ball" width="300" height="300"/>
+                </a>
+            </p>
+        </div>
+        <div class="w3-col s4">
+            <p>
+                <a href="@Url.Action("Index", "Dictionary")">
+                    <img src="~/Graphics/UrbanDictionary.jpeg" alt="Urban Dictionary" width="300" height="300"/>
+                </a>
+            </p>
+        </div>
+    </div>
+    <div class="w3-row-padding">
+        <div class="w3-col s4">
+            <a href="@Url.Action("Index", "Stack")">Pancake Stacks</a>
+        </div>
+        <div class="w3-col s4">
+            <a href="@Url.Action("Index", "Queue")">Cue Queues</a>
+        </div>
+        <div class="w3-col s4">
+            <a href="@Url.Action("Index", "Dictionary")">Urban Dictionaries</a>
+        </div>
+    </div>
+</body>
+</html>
